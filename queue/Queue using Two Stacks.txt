@@ -1,0 +1,19 @@
+q=int(input())
+stackpush=[]
+sdelete=[]
+for i in range (q):
+    t=list(input().split())
+    if t[0] =='1':
+        stackpush.append(t[1])
+    
+    elif t[0] =='2':
+        if not sdelete:
+            while stackpush:
+                sdelete.append(stackpush.pop())
+        sdelete.pop()
+        
+    else:
+        if not sdelete:
+            while stackpush:
+                sdelete.append(stackpush.pop())
+        print(sdelete[-1])
